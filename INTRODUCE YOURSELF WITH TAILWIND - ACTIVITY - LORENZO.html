@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Space | Enzo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script>
+        // Enables dark mode using a class
+        tailwind.config = {
+            darkMode: 'class',
+        }
+
+        // Function to switch between modes
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100 transition-colors duration-500 selection:bg-blue-200">
+
+    <nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight hover:scale-105 transition-transform cursor-pointer">
+                    Enzo's<span class="text-sky-400"> Space</span>
+                </h1>
+                
+                <div class="flex items-center space-x-6">
+                    <ul class="hidden md:flex space-x-8 text-slate-600 dark:text-slate-300 font-semibold">
+                        <li><a href="#about" class="relative group hover:text-blue-600 transition">About Me
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                        </a></li>
+                        <li><a href="#hobbies" class="relative group hover:text-blue-600 transition">Hobbies
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                        </a></li>
+                        <li><a href="#places" class="relative group hover:text-blue-600 transition">Dream Places
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                        </a></li>
+                    </ul>
+
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 hover:ring-2 ring-blue-400 transition-all">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <a href="#goals" class="hidden sm:block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all shadow-md">Goals</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-600 to-sky-500 dark:from-slate-900 dark:via-blue-900 dark:to-slate-950 text-white py-32 px-6 text-center">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-sky-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="animate-float">
+                <img src="https://static.wikia.nocookie.net/callofduty/images/a/a5/Velikan_Megalith_Skin_MW.png/revision/latest?cb=20200817231702" alt="Profile" 
+                     class="mx-auto rounded-full border-8 border-white/20 shadow-2xl mb-8 w-40 h-40 object-cover">
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">Hi, I'm Enzo</h1>
+            <p class="max-w-2xl mx-auto text-xl text-blue-50 leading-relaxed opacity-90">
+                This website shares some of my passions, hobbies, and dreams. 
+                I enjoy learning new technologies and improving my skills through creativity.
+            </p>
+            <div class="mt-10 animate-bounce">
+                <a href="#about" class="text-white/70 hover:text-white transition"><i class="fa-solid fa-chevron-down text-2xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-4xl mx-auto py-24 px-6">
+        <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-12">About Me</h2>
+        <div class="group bg-white dark:bg-slate-900 rounded-3xl shadow-xl shadow-blue-100/50 dark:shadow-none border border-slate-100 dark:border-slate-800 p-12 text-center hover:border-blue-400 transition-all duration-500">
+            <p class="text-slate-600 dark:text-slate-400 text-xl leading-relaxed group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">
+                I enjoy learning about programming, technology, and creative problem solving.
+                Exploring new ideas motivates me to continuously improve my knowledge.
+            </p>
+        </div>
+    </section>
+
+    <section id="hobbies" class="bg-blue-50/50 dark:bg-slate-900/50 py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-16">My Hobbies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border-t-8 border-blue-600">
+                    <div class="w-20 h-20 bg-blue-200 dark:bg-blue-800/30 rounded-2xl flex items-center justify-center mb-8 group-hover:-rotate-12 transition-transform">
+                        <i class="fa-solid fa-gamepad text-4xl text-blue-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gaming</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Playing games helps me relax and enjoy my free time.</p>
+                </div>
+                <div class="group bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border-t-8 border-blue-600">
+                    <div class="w-20 h-20 bg-blue-200 dark:bg-blue-800/30 rounded-2xl flex items-center justify-center mb-8 group-hover:-rotate-12 transition-transform">
+                        <i class="fa-solid fa-headphones text-4xl text-blue-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Music</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Music keeps me focused and inspired while studying.</p>
+                </div>
+                <div class="group bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border-t-8 border-blue-600">
+                    <div class="w-20 h-20 bg-blue-200 dark:bg-blue-800/30 rounded-2xl flex items-center justify-center mb-8 group-hover:-rotate-12 transition-transform">
+                        <i class="fa-solid fa-laptop-code text-4xl text-blue-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Programming</h3>
+                    <p class="text-slate-600 dark:text-slate-400">Learning programming allows me to create useful projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="places" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-16">Dream Places</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Japan" class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 dark:from-slate-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Japan</h3>
+                        <p class="text-blue-100 text-sm">Known for technology and beautiful cities.</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Switzerland" class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 dark:from-slate-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Switzerland</h3>
+                        <p class="text-blue-100 text-sm">Famous for mountains and amazing scenery.</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://www.wendywutours.co.uk/resource/upload/437/grand-tour-of-china-desk-s.jpg.webp" alt="China" class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 dark:from-slate-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">China</h3>
+                        <p class="text-blue-100 text-sm">A modern country with vibrant culture and food.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="goals" class="bg-blue-900 dark:bg-slate-900 text-white py-24 px-6 relative overflow-hidden transition-colors duration-500">
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl font-extrabold mb-16 tracking-tight">Goals & Aspirations</h2>
+            <div class="space-y-4">
+                <div class="flex items-center space-x-6 bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition cursor-default">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-xl font-medium">Become a skilled software developer</span>
+                </div>
+                <div class="flex items-center space-x-6 bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition cursor-default">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-xl font-medium text-left">Build creative and useful web applications</span>
+                </div>
+                <div class="flex items-center space-x-6 bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition cursor-default">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-xl font-medium">Travel to different countries</span>
+                </div>
+                <div class="flex items-center space-x-6 bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition cursor-default">
+                    <div class="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <span class="text-xl font-medium">Keep learning new technologies</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 text-slate-500 text-center py-12 transition-colors duration-500">
+        <p class="font-bold text-slate-800 dark:text-slate-200 mb-2">Enzo's Portfolio</p>
+        <p class="text-sm">Website created using Tailwind CSS</p>
+    </footer>
+
+</body>
+</html>
